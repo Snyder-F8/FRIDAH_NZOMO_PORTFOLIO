@@ -1,0 +1,104 @@
+
+/* Main application wrapper */
+#root {
+  min-height: 100vh;
+}
+
+/* Reusable content container */
+.container {
+  width: min(1100px, 90%);
+  margin-inline: auto;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  border-bottom: 1px solid #e8e5df;
+}
+
+/* Portfolio name/logo */
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #96704a;
+}
+
+/* Main home section */
+.hero {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 0;
+}
+
+/* Main heading */
+.hero h1 {
+  max-width: 850px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+/* Introductory paragraph */
+.hero p {
+  max-width: 650px;
+  font-size: 1.1rem;
+  color: #66615b;
+}
+
+/* Reusable button */
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background-color: #252525;
+  color: #ffffff;
+  border: 1px solid #252525;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #444444;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+}
