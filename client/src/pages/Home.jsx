@@ -7,7 +7,7 @@ export default function Home() {
         </p>
 
         <h1>
-          Hi, I'm Sereluna.
+          Hi, I'm Fridah Nzomo.
         </h1>
 
         <h2>
