@@ -344,3 +344,143 @@
     padding: 24px;
   }
 }
+
+/* Contact page */
+.contact-page {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+
+.contact-intro {
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+
+.contact-intro h1 {
+  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
+.contact-intro > p:last-child {
+  max-width: 620px;
+  color: #66615b;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-details,
+.contact-form {
+  padding: 30px;
+  border: 1px solid #e8e5df;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.contact-details h2,
+.contact-form h2 {
+  margin-bottom: 18px;
+  font-size: 1.5rem;
+}
+
+.contact-details > p {
+  margin-bottom: 30px;
+  color: #66615b;
+  line-height: 1.8;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.contact-label {
+  color: #96704a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.contact-item a {
+  color: #403b36;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: #96704a;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin: 16px 0 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2ded7;
+  border-radius: 7px;
+  background-color: #faf9f6;
+  color: #252525;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #96704a;
+  box-shadow: 0 0 0 3px rgba(150, 112, 74, 0.12);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .button {
+  margin-top: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-note {
+  margin: 12px 0 0;
+  color: #77716a;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .contact-page {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-details,
+  .contact-form {
+    padding: 24px;
+  }
+}
