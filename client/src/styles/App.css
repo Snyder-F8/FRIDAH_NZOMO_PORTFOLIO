@@ -1,4 +1,8 @@
 
+/* ========================================
+   1. GLOBAL LAYOUT
+======================================== */
+
 /* Main application wrapper */
 #root {
   min-height: 100vh;
@@ -11,7 +15,10 @@
 }
 
 
-/* Navigation bar */
+/* ========================================
+   2. NAVIGATION BAR
+======================================== */
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,7 +28,7 @@
   background-color: #faf9f6;
 }
 
-/* Portfolio name/logo */
+/* Portfolio logo */
 .logo {
   font-size: 1.25rem;
   font-weight: 700;
@@ -52,87 +59,39 @@
   font-weight: 700;
 }
 
-/* Mobile navigation */
-@media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-}
+/* ========================================
+   3. HOME PAGE
+======================================== */
 
-/* Portfolio name/logo */
-.logo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-/* Navigation links */
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.nav-links a {
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #96704a;
-}
-
-/* Main home section */
 .hero {
   width: min(1100px, 90%);
-  margin: 0 auto;
   min-height: 75vh;
+  margin: 0 auto;
+  padding: 70px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 70px 0;
 }
 
 /* Main heading */
 .hero h1 {
   max-width: 850px;
+  margin-bottom: 24px;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.1;
   letter-spacing: -2px;
-  margin-bottom: 24px;
 }
 
-/* Introductory paragraph */
+/* Hero paragraphs */
 .hero p {
   max-width: 650px;
   font-size: 1.1rem;
   color: #66615b;
 }
 
-/* Reusable button */
-.button {
-  display: inline-block;
-  padding: 12px 22px;
-  border-radius: 8px;
-  background-color: #252525;
-  color: #ffffff;
-  border: 1px solid #252525;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.button:hover {
-  background-color: #444444;
-}
-
-/* Spacing between the Home page buttons */
+/* Home page buttons */
 .hero-buttons {
   display: flex;
   align-items: center;
@@ -142,24 +101,44 @@
 }
 
 
-/* Mobile layout */
-@media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
+/* ========================================
+   4. REUSABLE BUTTON
+======================================== */
 
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px;
-  }
-
-  .hero h1 {
-    letter-spacing: -1px;
-  }
+.button {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid #252525;
+  border-radius: 8px;
+  background-color: #252525;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
 }
 
-/* About page */
+.button:hover {
+  background-color: #444444;
+}
+
+
+/* ========================================
+   5. SHARED PAGE LABEL
+======================================== */
+
+.section-label {
+  margin-bottom: 14px;
+  color: #96704a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* ========================================
+   6. ABOUT PAGE
+======================================== */
+
 .about-page {
   padding-top: 70px;
   padding-bottom: 80px;
@@ -170,14 +149,6 @@
   margin-bottom: 70px;
 }
 
-.section-label {
-  margin-bottom: 14px;
-  color: #96704a;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
 .about-intro h1 {
   margin-bottom: 24px;
   font-size: clamp(2.5rem, 5vw, 4rem);
@@ -186,9 +157,9 @@
 }
 
 .about-lead {
+  color: #403b36;
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #403b36;
 }
 
 .about-intro > p:not(.section-label):not(.about-lead) {
@@ -197,6 +168,7 @@
   line-height: 1.8;
 }
 
+/* Skills section */
 .about-skills h2 {
   margin-bottom: 28px;
   font-size: 2rem;
@@ -227,26 +199,11 @@
   line-height: 1.7;
 }
 
-@media (max-width: 600px) {
-  .about-page {
-    padding-top: 45px;
-    padding-bottom: 55px;
-  }
 
-  .about-intro {
-    margin-bottom: 48px;
-  }
+/* ========================================
+   7. PROJECTS PAGE
+======================================== */
 
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-card {
-    padding: 22px;
-  }
-}
-
-/* Projects page */
 .projects-page {
   padding-top: 70px;
   padding-bottom: 80px;
@@ -271,6 +228,7 @@
   line-height: 1.8;
 }
 
+/* Project cards */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -316,6 +274,7 @@
   line-height: 1.8;
 }
 
+/* Technology tags */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -331,31 +290,21 @@
   font-size: 0.8rem;
 }
 
+/* Project link placeholder */
 .project-link-note {
+  width: 100%;
   margin: 24px 0 0;
   padding-top: 16px;
-  width: 100%;
   border-top: 1px solid #eeeae4;
   color: #77716a;
   font-size: 0.85rem;
 }
 
-@media (max-width: 700px) {
-  .projects-page {
-    padding-top: 45px;
-    padding-bottom: 55px;
-  }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+/* ========================================
+   8. CONTACT PAGE
+======================================== */
 
-  .project-card {
-    padding: 24px;
-  }
-}
-
-/* Contact page */
 .contact-page {
   padding-top: 70px;
   padding-bottom: 80px;
@@ -380,6 +329,7 @@
   line-height: 1.8;
 }
 
+/* Contact details and form layout */
 .contact-layout {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -407,6 +357,7 @@
   line-height: 1.8;
 }
 
+/* Individual contact details */
 .contact-item {
   display: flex;
   flex-direction: column;
@@ -431,6 +382,7 @@
   color: #96704a;
 }
 
+/* Contact form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -469,7 +421,6 @@
 .contact-form .button {
   margin-top: 22px;
   border: none;
-  cursor: pointer;
 }
 
 .form-note {
@@ -478,7 +429,28 @@
   font-size: 0.8rem;
 }
 
+
+/* ========================================
+   9. RESPONSIVE STYLES
+======================================== */
+
+/* Tablets and smaller screens */
 @media (max-width: 700px) {
+  /* Projects */
+  .projects-page {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+
+  /* Contact */
   .contact-page {
     padding-top: 45px;
     padding-bottom: 55px;
@@ -492,5 +464,42 @@
   .contact-details,
   .contact-form {
     padding: 24px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  /* Navigation */
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  /* Home */
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  /* About */
+  .about-page {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+  .about-intro {
+    margin-bottom: 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card {
+    padding: 22px;
   }
 }
