@@ -105,6 +105,7 @@
    4. REUSABLE BUTTON
 ======================================== */
 
+
 .button {
   display: inline-block;
   padding: 12px 22px;
@@ -114,13 +115,22 @@
   color: #ffffff;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .button:hover {
   background-color: #444444;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 37, 37, 0.12);
 }
 
+.button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
 
 /* ========================================
    5. SHARED PAGE LABEL
@@ -503,3 +513,25 @@
     padding: 22px;
   }
 }
+
+/* Accessible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #96704a;
+  outline-offset: 3px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
