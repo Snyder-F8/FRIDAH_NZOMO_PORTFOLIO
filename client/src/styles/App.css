@@ -132,6 +132,16 @@
   background-color: #444444;
 }
 
+/* Spacing between the Home page buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+
 /* Mobile layout */
 @media (max-width: 600px) {
   .navbar {
