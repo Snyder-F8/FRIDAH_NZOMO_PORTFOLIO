@@ -16,7 +16,7 @@ export default function About() {
           I enjoy building practical software solutions,
           working with data, and understanding how technology
           can solve real-world problems. My experience includes
-          application development, database systems, testing,
+          application development, database systems, 876testing,
           and supporting business-critical applications.
         </p>
 
