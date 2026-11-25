@@ -1,9 +1,9 @@
 from flask import Flask
 from sqlalchemy import text
-from app.models import Project, ContactMessage
 
 from config import Config
 from app.extensions import db, migrate, cors
+from app.models import Project, ContactMessage
 
 
 def create_app():
