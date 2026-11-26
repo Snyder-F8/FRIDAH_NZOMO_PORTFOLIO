@@ -26,6 +26,8 @@ def create_app():
         }
     )
 
+    app.register_blueprint(projects_bp)
+    
     # Home endpoint
     @app.route("/")
     def home():
